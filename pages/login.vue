@@ -1,9 +1,4 @@
 <script setup lang="ts">
-import { useToast } from "@nuxt/ui/runtime/composables/useToast.js";
-import { navigateTo } from "nuxt/app";
-import { ref } from "vue";
-import { useAuth } from "~/composables/useAuth";
-
 const show = ref(false);
 
 const { login } = useAuth();

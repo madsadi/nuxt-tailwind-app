@@ -1,12 +1,3 @@
 {
-  "compilerOptions": {
-    "baseUrl": ".",
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "paths": {
-      "~/*": ["./*"],
-      "@/*": ["./*"]
-    }
-  },
-  "exclude": ["node_modules"]
+  "extends": "./.nuxt/tsconfig.json"
 }

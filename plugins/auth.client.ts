@@ -12,18 +12,11 @@ export default defineNuxtPlugin(() => {
       return false;
     },
 
-    loginWith: (
+    loginWith: async (
       strategy: string,
       { data }: { data: { username: string; password: string } }
     ) => {
       // Simulate login success
-      console.log(
-        "Attempting to log in with strategy:",
-        strategy,
-        data,
-        data.username,
-        data.password
-      );
       if (
         strategy === "local" &&
         data.username === "admin" &&

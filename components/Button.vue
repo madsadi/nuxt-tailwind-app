@@ -7,7 +7,7 @@ withDefaults(
     trailingIcon?: string;
     disabled?: boolean;
     loading?: boolean;
-    variant?: "primary" | "secondary" | "tertiary";
+    variant?: "primary" | "secondary" | "tertiary" | "outline" | "ghost";
   }>(),
   {
     size: "md",
