@@ -1,3 +1,5 @@
+import { defineNuxtPlugin } from "nuxt/app";
+
 export default defineNuxtPlugin(() => {
   const TOKEN_KEY = "auth_token";
 
@@ -10,11 +12,18 @@ export default defineNuxtPlugin(() => {
       return false;
     },
 
-    loginWith: async (
+    loginWith: (
       strategy: string,
       { data }: { data: { username: string; password: string } }
     ) => {
       // Simulate login success
+      console.log(
+        "Attempting to log in with strategy:",
+        strategy,
+        data,
+        data.username,
+        data.password
+      );
       if (
         strategy === "local" &&
         data.username === "admin" &&

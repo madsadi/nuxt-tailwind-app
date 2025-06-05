@@ -1,1 +1,18 @@
 @import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme {
+  --color-body: #0d172b;
+}
+
+@layer base {
+  h1 {
+    font-size: var(--text-2xl);
+  }
+  h2 {
+    font-size: var(--text-xl);
+  }
+  h3 {
+    font-size: var(--text-lg);
+  }
+}
