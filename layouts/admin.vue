@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import Header from "~/components/layout/admin/Header.vue";
-import Sidebar from "~/components/layout/admin/Sidebar.vue";
+import SidebarLayout from "~/components/layout/admin/SidebarLayout.vue";
 </script>
 
 <template>
-  <Header />
-  <slot />
-  <Sidebar />
+  <SidebarLayout>
+    <slot />
+  </SidebarLayout>
 </template>
