@@ -18,10 +18,13 @@ const userNavigation = [
   { name: "Your profile", action: () => navigateTo("/admin/setting") },
   { name: "Sign out", action: () => handleLogout() },
 ];
-const route = useRouter();
+const router = useRouter();
+const route = useRoute();
 function handleLogout() {
   logout().then(() => {
-    route.push("/");
+    if (route.path.startsWith("/admin")) {
+      router.push("/");
+    }
   });
 }
 </script>
