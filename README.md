@@ -1,75 +1,60 @@
-# Nuxt Minimal Starter
+# nuxt-tailwind-app
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A Nuxt.js application styled with Tailwind CSS, demonstrating modular architecture and scalable project structure using Nuxt Layers and Plugins.
 
-## Setup
+[View Live on Vercel](https://nuxt-tailwind-app-dun.vercel.app/)
 
-Make sure to install dependencies:
+## Features
 
-```bash
-# npm
-npm install
+- **Nuxt Layers**: The project leverages Nuxt Layers for a modular codebase. Layers enable mono-repo-like development, where features or sections can be developed and exported individually—ideal for larger projects or when sharing code across multiple Nuxt apps.
+- **Nuxt Plugins**: Utilizes Nuxt’s plugin system for injecting custom logic and third-party integrations in a clean, maintainable way.
+- **Tailwind CSS**: Rapid utility-first styling for responsive UI development.
+- **Modern Vue**: Built with Vue 3 and Nuxt for a fast, reactive experience.
 
-# pnpm
-pnpm install
+## Getting Started
 
-# yarn
-yarn install
+### Prerequisites
 
-# bun
-bun install
-```
+- Node.js (v16+ recommended)
+- npm or yarn
 
-## Development Server
+### Installation
 
-Start the development server on `http://localhost:3000`:
+1. Clone the repository:
 
-```bash
-# npm
-npm run dev
+   ```sh
+   git clone https://github.com/madsadi/nuxt-tailwind-app.git
+   cd nuxt-tailwind-app
+   ```
 
-# pnpm
-pnpm dev
+2. Install dependencies:
 
-# yarn
-yarn dev
+   ```sh
+   npm install
+   # or
+   yarn install
+   ```
 
-# bun
-bun run dev
-```
+3. Run the development server:
 
-## Production
+   ```sh
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-Build the application for production:
+4. Open [http://localhost:3000](http://localhost:3000) to view the app locally.
 
-```bash
-# npm
-npm run build
+## Project Structure
 
-# pnpm
-pnpm build
+- `/layers`: Contains reusable layers for modular development.
+- `/plugins`: Custom Nuxt plugins for app-wide logic.
+- `/components`, `/pages`, etc.: Standard Nuxt/Vue directories.
 
-# yarn
-yarn build
+## Why Nuxt Layers?
 
-# bun
-bun run build
-```
+Having worked with Next.js, I found Nuxt Layers to be a flexible way to structure a Vue app—allowing parts of your codebase to be independently developed or exported. It’s a powerful tool for building scalable and maintainable projects.
 
-Locally preview production build:
+## License
 
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+[MIT](LICENSE)
