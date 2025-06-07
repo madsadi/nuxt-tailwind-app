@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const appConfig = useAppConfig().indexPage;
+const appConfig = useAppConfig().landingPage;
 </script>
 <template>
   <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-56 lg:px-8">

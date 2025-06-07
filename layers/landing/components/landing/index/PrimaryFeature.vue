@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const appConfig = useAppConfig().indexPage;
+const appConfig = useAppConfig().landingPage;
 </script>
 
 <template>

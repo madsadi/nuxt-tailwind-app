@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <CommonHeader />
+  <CommonStoreHeader />
   <slot />
-  <CommonFooter />
+  <CommonStoreFooter />
 </template>

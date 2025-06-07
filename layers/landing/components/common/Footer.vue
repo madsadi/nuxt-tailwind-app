@@ -16,7 +16,7 @@ const appConfig = useAppConfig();
               <h3 class="text-sm/6 font-semibold text-white">Solutions</h3>
               <ul role="list" class="mt-6 space-y-4">
                 <li
-                  v-for="item in appConfig.footerNavigation.solutions"
+                  v-for="item in appConfig.landingFooterNavigation.solutions"
                   :key="item.name"
                 >
                   <NuxtLink
@@ -31,7 +31,7 @@ const appConfig = useAppConfig();
               <h3 class="text-sm/6 font-semibold text-white">Support</h3>
               <ul role="list" class="mt-6 space-y-4">
                 <li
-                  v-for="item in appConfig.footerNavigation.support"
+                  v-for="item in appConfig.landingFooterNavigation.support"
                   :key="item.name"
                 >
                   <NuxtLink
@@ -48,7 +48,7 @@ const appConfig = useAppConfig();
               <h3 class="text-sm/6 font-semibold text-white">Company</h3>
               <ul role="list" class="mt-6 space-y-4">
                 <li
-                  v-for="item in appConfig.footerNavigation.company"
+                  v-for="item in appConfig.landingFooterNavigation.company"
                   :key="item.name"
                 >
                   <NuxtLink
@@ -63,7 +63,7 @@ const appConfig = useAppConfig();
               <h3 class="text-sm/6 font-semibold text-white">Legal</h3>
               <ul role="list" class="mt-6 space-y-4">
                 <li
-                  v-for="item in appConfig.footerNavigation.legal"
+                  v-for="item in appConfig.landingFooterNavigation.legal"
                   :key="item.name"
                 >
                   <NuxtLink
@@ -114,7 +114,7 @@ const appConfig = useAppConfig();
       >
         <div class="flex gap-x-6 md:order-2">
           <a
-            v-for="item in appConfig.footerNavigation.social"
+            v-for="item in appConfig.landingFooterNavigation.social"
             :key="item.name"
             :href="item.href"
             class="text-gray-400 hover:text-gray-300"

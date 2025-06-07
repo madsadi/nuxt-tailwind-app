@@ -1,21 +1,14 @@
-<template>
-  <LandingHero />
-  <LandingLogoCloud />
-  <LandingPrimaryFeature />
-  <LandingDeployFeature />
-  <LandingNewsletter />
-  <LandingTestimonials />
-</template>
-
 <script setup>
-import {
-  LandingDeployFeature,
-  LandingLogoCloud,
-  LandingNewsletter,
-  LandingTestimonials,
-} from "#components";
-
 definePageMeta({
   layout: "landing",
 });
 </script>
+
+<template>
+  <LandingIndexHero />
+  <LandingIndexLogoCloud />
+  <LandingIndexPrimaryFeature />
+  <LandingIndexDeployFeature />
+  <LandingIndexNewsletter />
+  <LandingIndexTestimonials />
+</template>

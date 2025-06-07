@@ -32,7 +32,7 @@ const appConfig = useAppConfig();
       </div>
       <div class="hidden lg:flex lg:gap-x-12">
         <NuxtLink
-          v-for="item in appConfig.navigation"
+          v-for="item in appConfig.landingNavigation"
           :key="item.name"
           :href="item.href"
           class="text-sm/6 font-semibold text-gray-900"
@@ -76,7 +76,7 @@ const appConfig = useAppConfig();
           <div class="-my-6 divide-y divide-gray-500/10">
             <div class="space-y-2 py-6">
               <NuxtLink
-                v-for="item in appConfig.navigation"
+                v-for="item in appConfig.landingNavigation"
                 :key="item.name"
                 :href="item.href"
                 class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"

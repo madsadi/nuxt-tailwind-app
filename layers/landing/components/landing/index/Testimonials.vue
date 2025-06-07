@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const appConfig = useAppConfig().indexPage;
+const appConfig = useAppConfig().landingPage;
 </script>
 
 <template>
@@ -53,7 +53,9 @@ const appConfig = useAppConfig().indexPage;
             </figcaption>
           </figure>
           <div
-            v-for="(columnGroup, columnGroupIdx) in appConfig.testimonials"
+            v-for="(
+              columnGroup, columnGroupIdx
+            ) in appConfig.landingTestimonials"
             :key="columnGroupIdx"
             class="space-y-8 xl:contents xl:space-y-0"
           >
@@ -62,7 +64,7 @@ const appConfig = useAppConfig().indexPage;
               :key="columnIdx"
               :class="[
                 (columnGroupIdx === 0 && columnIdx === 0) ||
-                (columnGroupIdx === appConfig.testimonials.length - 1 &&
+                (columnGroupIdx === appConfig.landingTestimonials.length - 1 &&
                   columnIdx === columnGroup.length - 1)
                   ? 'xl:row-span-2'
                   : 'xl:row-start-1',
