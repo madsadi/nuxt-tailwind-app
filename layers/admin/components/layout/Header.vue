@@ -25,7 +25,7 @@ import {
   PhoneIcon,
   PlayCircleIcon,
 } from "@heroicons/vue/20/solid";
-import { useAuth } from "~/composables/useAuth";
+import { useAuth } from "~/layers/admin/composables/useAuth";
 
 const products = [
   {

@@ -1,9 +1,7 @@
-<script setup lang="ts">
-import SidebarLayout from "~/components/layout/admin/SidebarLayout.vue";
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <SidebarLayout>
+  <LayoutSidebarLayout>
     <slot />
-  </SidebarLayout>
+  </LayoutSidebarLayout>
 </template>

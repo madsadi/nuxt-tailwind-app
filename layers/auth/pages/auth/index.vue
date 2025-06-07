@@ -9,7 +9,7 @@ const state = ref({
 function onSubmit(event: Event) {
   event.preventDefault();
 
-  login({ ...state.value }).then((success) => {
+  login({ ...state.value }).then((success: any) => {
     if (success) {
       useNuxtApp().$toast.success("Login Successful");
 
@@ -46,10 +46,10 @@ function onSubmit(event: Event) {
               for="username"
               class="flex text-sm/6 font-medium text-gray-900"
               >Username
-              <ExclamationCircleIcon
+              <!-- <ExclamationCircleIcon
                 class="pointer-events-none col-start-1 row-start-1 ml-1 size-5 self-center text-red-500 sm:size-4"
                 aria-hidden="true"
-              />
+              /> -->
               <span class="ml-auto text-gray-400">admin</span>
             </label>
             <div class="mt-2">
@@ -57,7 +57,7 @@ function onSubmit(event: Event) {
                 required
                 name="username"
                 v-model="state.username"
-                class="block w-full rounded-md bg-white py-1.5 pr-10 pl-3 text-base text-red-900 outline-1 -outline-offset-1 outline-red-300 placeholder:text-red-300 focus:outline-2 focus:-outline-offset-2 focus:outline-red-600 sm:pr-9 sm:text-sm/6"
+                class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
                 placeholder="admin"
                 aria-invalid="true"
                 aria-describedby="username-error"

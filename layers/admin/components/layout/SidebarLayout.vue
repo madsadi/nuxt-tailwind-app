@@ -14,16 +14,14 @@ import {
   Bars3Icon,
   BellIcon,
   CalendarIcon,
-  ChartPieIcon,
   Cog6ToothIcon,
-  DocumentDuplicateIcon,
   FolderIcon,
   HomeIcon,
   UsersIcon,
   XMarkIcon,
 } from "@heroicons/vue/24/outline";
 import { ChevronDownIcon, MagnifyingGlassIcon } from "@heroicons/vue/20/solid";
-import { useAuth } from "~/composables/useAuth";
+import { useAuth } from "~/layers/admin/composables/useAuth";
 const route = useRoute();
 
 const navigation = [
@@ -64,7 +62,7 @@ const userNavigation = [
 const { logout } = useAuth();
 function handleLogout() {
   logout().then(() => {
-    navigateTo("/login");
+    navigateTo("/");
   });
 }
 const sidebarOpen = ref(false);
@@ -124,11 +122,13 @@ const sidebarOpen = ref(false);
                 class="flex grow flex-col gap-y-5 overflow-y-auto bg-indigo-600 px-6 pb-4"
               >
                 <div class="flex h-16 shrink-0 items-center">
-                  <img
-                    class="h-8 w-auto"
-                    src="https://tailwindui.com/plus-assets/img/logos/mark.svg?color=white"
-                    alt="Your Company"
-                  />
+                  <NuxtLink href="/">
+                    <img
+                      class="h-8 w-auto"
+                      src="https://tailwindui.com/plus-assets/img/logos/mark.svg?color=white"
+                      alt="Your Company"
+                    />
+                  </NuxtLink>
                 </div>
                 <nav class="flex flex-1 flex-col">
                   <ul role="list" class="flex flex-1 flex-col gap-y-7">
@@ -212,12 +212,14 @@ const sidebarOpen = ref(false);
       <div
         class="flex grow flex-col gap-y-5 overflow-y-auto bg-indigo-600 px-6 pb-4"
       >
-        <div class="flex h-16 shrink-0 items-center">
-          <img
-            class="h-8 w-auto"
-            src="https://tailwindui.com/plus-assets/img/logos/mark.svg?color=white"
-            alt="Your Company"
-          />
+        <div class="flex h-16 shrink-0 items-center" as="a">
+          <NuxtLink href="/">
+            <img
+              class="h-8 w-auto"
+              src="https://tailwindui.com/plus-assets/img/logos/mark.svg?color=white"
+              alt="Your Company"
+            />
+          </NuxtLink>
         </div>
         <nav class="flex flex-1 flex-col">
           <ul role="list" class="flex flex-1 flex-col gap-y-7">
