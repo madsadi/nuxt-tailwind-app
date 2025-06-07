@@ -7,7 +7,7 @@ import {
   MenuItem,
   MenuItems,
 } from "@headlessui/vue";
-import { ChevronDownIcon } from "@heroicons/vue/20/solid";
+import { ChevronDownIcon, Bars3Icon, XMarkIcon } from "@heroicons/vue/20/solid";
 import { useAuth } from "~/layers/admin/composables/useAuth";
 const mobileMenuOpen = ref(false);
 
@@ -21,7 +21,6 @@ const userNavigation = [
 const route = useRouter();
 function handleLogout() {
   logout().then(() => {
-    console.log(isAuthenticated, "status");
     route.push("/");
   });
 }
