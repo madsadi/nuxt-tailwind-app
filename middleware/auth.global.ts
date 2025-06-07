@@ -4,18 +4,16 @@ import { useAuth } from "~/composables/useAuth";
 export default defineNuxtRouteMiddleware((to, from) => {
   const { isAuthenticated } = useAuth();
 
-  if (to.path === "/" || to.path === "/login") {
+  if (to.path === "/auth") {
     if (process.client && isAuthenticated()) {
       return navigateTo("/admin/dashboard");
-    } else if (process.server && to.path === "/") {
-      return navigateTo("/login");
     }
   }
 
   if (to.path.startsWith("/admin")) {
     if (process.client) {
       if (!isAuthenticated()) {
-        return navigateTo("/login");
+        return navigateTo("/auth");
       }
     } else {
       return;
